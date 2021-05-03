@@ -1,0 +1,187 @@
+.bg-3-color-gradient {
+    background-image: linear-gradient(
+        to right top,
+        #8d49ff,
+        #8948fe,
+        #8646fe,
+        #8245fd,
+        #7e44fd,
+        #7b43fd,
+        #7741fd,
+        #7440fd,
+        #713ffd,
+        #6d3efc,
+        #6a3dfc,
+        #663cfc
+    );
+}
+
+.btn {
+    &__light {
+        background-color: #fff;
+        color: $secondary-color !important;
+        padding: 20px 30px;
+        border-radius: 100px;
+        @include transition(0.2s ease all);
+
+        &:hover {
+            @include transition(0.2s ease all);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+    }
+
+    &__upcase {
+        text-transform: uppercase;
+    }
+
+    &__underline {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transform-origin: center;
+            transform: translate(-50%, 0) scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover::before {
+            transform: translate(-50%, 0) scaleX(1);
+        }
+    }
+}
+
+header {
+    position: relative;
+
+    #open-menu {
+        display: none;
+        color: #fff;
+
+        @include bp(0, 1024px) {
+            display: block;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+        @include bp(tab) {
+            top: 20px;
+        }
+    }
+
+    .wrap-header {
+        padding: 50px 0;
+
+        @include bp(0, 1024px) {
+            flex-direction: column;
+            padding: 26px 0;
+        }
+
+        .logo {
+            p {
+                @include fs(34, 28);
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: bold;
+
+                @include bp(0, 1200px) {
+                    @include fs(26, 22);
+                }
+                @include bp(tab) {
+                    @include fs(24,20);
+                }
+                @include bp(sp) {
+                    @include fs(22,12)
+                }
+            }
+        }
+
+        .nav-menu {
+            @include bp(0, 1024px) {
+                margin: 20px 0;
+                width: 100%;
+            }
+            @include bp(sp) {
+                margin: 35px 0 30px;
+            }
+
+            ul {
+                @include bp(0, 1024px) {
+                    flex-direction: column;
+                }
+
+                li {
+                    margin: 0 10px;
+
+                    @include bp(0, 1024px) {
+                        margin: 0 0 14px;
+                        border-bottom: 1px solid #fff;
+                    }
+
+                    a {
+                        text-transform: uppercase;
+                        letter-spacing: 1.5px;
+                        color: #fff;
+                        font-size: 15px;
+                        line-height: 0.8;
+                        padding: 9px 22px;
+                        border-radius: 100px;
+                        @include transition(0.2s ease all);
+                        @include bp(0, 1024px) {
+                            padding: 8px 0;
+                        }
+                        @include bp(sp) {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            background-color: #fff;
+                            color: $secondary-color;
+                            @include transition(0.2s ease all);
+                        }
+                    }
+                }
+            }
+        }
+
+        .group-cta {
+            @include bp(0, 1024px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            a {
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: #fff;
+                font-size: 15px;
+                line-height: 0.8;
+                &:first-child {
+                    margin-right: 2em;
+                }
+
+                @include bp(0, 1024px) {
+                    background-color: #fff;
+                    color: $secondary-color !important;
+                    padding: 20px 30px;
+                    border-radius: 100px;
+                    display: block;
+                    width: 100%;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                    @include bp(tab) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

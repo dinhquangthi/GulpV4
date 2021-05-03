@@ -1,9 +1,8 @@
 // --------------------
 // Global Variables
 // --------------------
-$global-font-size: 14px;
-$global-font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-$font-family-mincho: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+$global-font-size: 16px;
+$global-font-family: 'Roboto', sans-serif;
 
 // --------------------
 // Global Colors
@@ -26,6 +25,10 @@ $bg-yellow-light: #ba8537;
 $color-white: #ffffff;
 $color-blue: #2689FF;
 $color-breadcrumb: #2689FF;
+
+
+$primary-color: #663cfc;
+$secondary-color: #5064d7;
 
 
 // --------------------
