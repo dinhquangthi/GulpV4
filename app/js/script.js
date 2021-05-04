@@ -18,6 +18,13 @@ $(function () {
     $(window).on('resize', function () {
         checkMenuMobile()
     });
+    $(window).scroll(function(){
+        var sticky = $('.sticky'),
+            scroll = $(window).scrollTop();
+      
+        if (scroll >= sticky.outerHeight()) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+      });
 
 })
 $(window).on('load', function () {
